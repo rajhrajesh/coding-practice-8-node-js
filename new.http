@@ -1,0 +1,54 @@
+//API 1 for all GET Method
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+GET http://localhost:3000/todos/?status=TO%20DO&priority=LOW
+
+###
+GET http://localhost:3000/todos/?search_q=Finalize
+
+//API/ 2 for the GET Id Method
+
+###
+GET http://localhost:3000/todos/10/
+
+//API 3 for POST Method
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+//API 4 for the all PUT Method
+###
+PUT http://localhost:3000/todos/10/
+Content-Type: application/json
+{
+  "status": "DONE"
+}
+
+###
+PUT http://localhost:3000/todos/10/
+Content-Type: application/json
+{
+  "priority": "HIGH"
+}
+
+###
+PUT http://localhost:3000/todos/10/
+Content-Type: application/json
+{
+  "todo": "Some task"
+}
+
+//API 5 for Delete Method
+
+###
+DELETE http://localhost:3000/todos/10/
